@@ -1,4 +1,6 @@
 class SubjectsController < ApplicationController
+  layout 'admin'
+
   def index
     @subjects = Subject.includes(:pages).sorted
     # default rails behavior
