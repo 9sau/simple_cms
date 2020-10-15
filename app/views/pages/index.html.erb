@@ -15,7 +15,7 @@
         <td><%= page.position %></td>
         <td><%= page.name %></td>
         <td><%= page.permalink %></td>
-        <td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
+        <td class="center"><%= status_tag(page.visible) %></td>
         <td class="center"><%= page.admin_users.size %></td>
         <td class="actions">
           <%= link_to("Show", { :controller => 'pages', :action => 'show', :id => page.id }, :class => "action show") %>
