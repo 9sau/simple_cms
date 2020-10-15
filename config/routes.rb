@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   root 'demo#index'
+
+  # get 'sections/index'
+  # get 'sections/show'
+  # get 'sections/new'
+  # get 'sections/edit'
+  # get 'sections/delete'
+
   # get 'pages/index'
   # get 'pages/show'
   # get 'pages/edit'
@@ -19,6 +26,12 @@ Rails.application.routes.draw do
   end
 
   resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+  resources :sections do
     member do
       get :delete
     end
